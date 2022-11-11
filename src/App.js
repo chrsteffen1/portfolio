@@ -2,10 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
-import Projects from './pages/Projects';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Resume from './pages/Resume/Resume';
+import Projects from './pages/Projects/Projects';
 import NavBar from './components/NavBar';
 
 

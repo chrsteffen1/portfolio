@@ -1,4 +1,8 @@
+*{
+  margin: 5px
+}
 .image{
-  height: 80vh;
+  height: 60vh;
   width: auto;
+  border-radius: 25%;
 }
