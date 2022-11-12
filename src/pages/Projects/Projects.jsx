@@ -1,6 +1,11 @@
-const Projects = () => {
+import { projects } from "../../data/projects";
+import ProjectList from "../../components/ProjectList";
+
+const Projects = (props) => {
   return ( 
-    <h1>Projects</h1>
+    <>
+      <ProjectList projects={projects}/>
+    </>
   );
 }
 
