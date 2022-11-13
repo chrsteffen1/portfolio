@@ -1,3 +1,5 @@
+import ProjectPreview from "./ProjectPreview";
+
 const ProjectList = (props) => {
   return (  
     <>
@@ -6,13 +8,7 @@ const ProjectList = (props) => {
         <div key={idx}>
           <ul>
             <li>
-              <div>
-                <img src={project.image} alt={project.title} />
-                <section>
-                  <h3>{project.title}</h3>
-                  <a href={project.deploymentLink} target="_blank" rel='noreferrer'><button>{project.title}</button></a>
-                </section>
-              </div>
+              <ProjectPreview title={project.title} image={project.image}/>
             </li>
           </ul>
         </div>
