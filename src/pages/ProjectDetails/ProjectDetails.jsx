@@ -1,16 +1,32 @@
 import { projects } from "../../data/projects";
+import { useParams } from "react-router-dom";
+import { findProject } from "../../utilities/findProject";
 
 const ProjectDetails = () => {
+  const { projectDetails } = useParams();
+  // const project = findProject(projects.title)
+  // console.log(project)
+  let project = findProject(projectDetails)
+  console.log(project)
+
   return (  
     <>
-    <h1>{projects[0].title}</h1>
-    <p>{projects[0].description}</p>
-    <img src={projects[0].image} alt={projects[0].title} />
+    <h1>{project.title}</h1>
+    <p>{project.description}</p>
+      
+    {/* {projects.map((project) =>(
+      if( project.title === projectDetails) {
+        {project.title}
+      }   
+    ))} */}
+    {/* <p>{projects.description}</p>
+    <img src={projects.image} alt={projects.title} />
     <br />
-    <a href={projects[0].repositoryLink}><button>GitHub</button></a>
-    <a href={projects[0].deploymentLink}> <button>Link</button></a>
+    <a href={projects.repositoryLink}><button>GitHub</button></a>
+    <a href={projects.deploymentLink}> <button>Link</button></a> */}
     </>
   );
 }
 
 export default ProjectDetails;
+

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -8,6 +7,7 @@ import Resume from './pages/Resume/Resume';
 import Projects from './pages/Projects/Projects';
 import NavBar from './components/NavBar';
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
+import { projects } from './data/projects';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/projects' element={<Projects />} />
-        <Route path='/projects/:projectDetails' element={<ProjectDetails />}/>
+        <Route path='/projects/:projectDetails' element={<ProjectDetails projects={projects}/>}/>
       </Routes>
     </>
   );
