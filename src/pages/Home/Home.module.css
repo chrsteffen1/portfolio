@@ -2,7 +2,6 @@
   margin: 5px
 }
 .image{
-  height: 60vh;
-  width: auto;
+  max-width: 300px;
   border-radius: 25%;
 }
