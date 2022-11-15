@@ -1,12 +1,12 @@
-// import React from "react";
-import resume from '../../assets/resume.pdf'
-// import { Document, Page, pdfjs } from "react-pdf";
+import resume from '../../assets/Chris_Steffen_Resume.pdf'
 
 const Resume = () => {
   return ( 
     <>
       <h1>Resume</h1>
-      <a href={resume} download>Resume</a>
+      <p>
+        <a href={resume} download>Resume</a>
+      </p>
     </>
   );
 }
