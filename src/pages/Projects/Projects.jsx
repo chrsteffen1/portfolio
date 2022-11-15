@@ -1,6 +1,6 @@
 import { projects } from "../../data/projects";
 import ProjectList from "../../components/ProjectList";
-// import styles from './Projects.module.css'
+import styles from './Projects.module.css'
 
 const Projects = (props) => {
   return ( 
