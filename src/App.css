@@ -2,10 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  width: 100% 
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

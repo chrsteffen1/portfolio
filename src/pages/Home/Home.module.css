@@ -1,7 +1,14 @@
 *{
-  margin: 5px
+  margin: 5px;
 }
 .image{
   max-width: 300px;
   border-radius: 25%;
+}
+
+.landing{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
