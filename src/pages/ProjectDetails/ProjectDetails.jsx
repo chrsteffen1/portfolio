@@ -12,7 +12,7 @@ const ProjectDetails = () => {
     <img src={project.image} alt={project.title} />
     <br />
     <a href={project.repositoryLink}><button>GitHub</button></a>
-    <a href={project.deploymentLink}> <button>Link</button></a> 
+    <a href={project.deploymentLink}><button>Link</button></a> 
     </>
   );
 }
