@@ -8,12 +8,12 @@ const ProjectDetails = () => {
 
   return (  
     <div className={styles.details}>
-    <h1>{project.title}</h1>
-    <p>{project.description}</p>
-    <img src={project.image} alt={project.title} />
+    <h1 className={styles.title}>{project.title}</h1>
+    <img src={project.image} alt={project.title} className={styles.image} />
     <br />
-    <a href={project.repositoryLink}><button>GitHub</button></a>
-    <a href={project.deploymentLink}><button>Link</button></a> 
+    <p className={styles.description}>{project.description}</p>
+    <a href={project.repositoryLink} className={styles.git}><button>GitHub</button></a>
+    <a href={project.deploymentLink} className={styles.link}><button>Link</button></a> 
     </div>
   );
 }

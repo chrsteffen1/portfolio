@@ -1,0 +1,22 @@
+.about{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 25px ;
+  padding: 50px;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+}
+
+.image{
+  display: flex;
+  border-radius: 15%;
+}
