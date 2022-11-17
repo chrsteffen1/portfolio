@@ -45,3 +45,8 @@ button{
   height: calc(2.25rem + 2px);
   color: black;
 }
+
+.icons {
+  height: 30px;
+  margin: 5px;
+}

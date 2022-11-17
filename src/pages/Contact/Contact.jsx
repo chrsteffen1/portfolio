@@ -2,6 +2,8 @@ import React from "react";
 import { useRef } from "react";
 import emailjs from 'emailjs-com'
 import styles from './Contact.module.css'
+import  gitIcon  from '../../assets/git_icon.png'
+import  linkedinIcon  from '../../assets/linkedin.png'
 
 const Contact = () => {
   const form = useRef();
@@ -52,6 +54,10 @@ const Contact = () => {
             <button type="submit" value="Send">Submit</button>
           </div>
         </form>
+        <div className={styles.social}>
+          <a href="https://www.linkedin.com/in/chris-steffen1/" alt="" target='_blank' rel="noreferrer"><img src={linkedinIcon} alt="linkedin icon" className={styles.icons}/></a>
+          <a href="https://github.com/chrsteffen1" alt='' target='_blank' rel="noreferrer" ><img src={gitIcon} alt="git icon" className={styles.icons}/></a>
+        </div>
       </div>
     </>
   );
