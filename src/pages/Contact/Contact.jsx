@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import emailjs from 'emailjs-com'
+import styles from './Contact.module.css'
 
 const Contact = () => {
   const form = useRef();
@@ -24,24 +25,32 @@ const Contact = () => {
 
   return ( 
     <>
-      <h1>Contact</h1>
-      <div>
+      <h1 className={styles.contact}>Contact</h1>
+      {/* <div>
         <p>Reach out if you'd liked to connect <a href="mailto:ChrisJSteffen@gmail.com ">email</a> <br />
         Other links <br />
         <a href="https://www.linkedin.com/in/chris-steffen1/" alt="" target='_blank' rel="noreferrer">linkedin</a>
         <br />
         <a href="https://github.com/chrsteffen1" alt='' target='_blank' rel="noreferrer">Github</a>
         </p>
-      </div>
-      <div>
+      </div> */}
+      <div className={styles.formDiv}>
         <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" required/>
-          <label>Email</label>
-          <input type="email" name="user_email" required/>
-          <label>Message</label>
-          <textarea name="message" required/>
-          <input type="submit" value="Send" />
+          <div className={styles.input}>
+            <label>Name</label>
+            <input type="text" name="user_name" required/>
+          </div>
+          <div className={styles.input}>
+            <label>Email</label>
+            <input type="email" name="user_email" required/>
+          </div>
+          <div className={styles.input}>
+            <label>Message</label>
+            <textarea name="message" cols='40' rows='5' required/>
+          </div>
+          <div className={styles.input}>
+            <button type="submit" value="Send">Submit</button>
+          </div>
         </form>
       </div>
     </>
