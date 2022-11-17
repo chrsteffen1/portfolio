@@ -19,4 +19,20 @@
 .image{
   display: flex;
   border-radius: 15%;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  min-width: auto;
+}
+
+@media (max-width: 760px) {
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image{
+    height: 40%;
+    width: auto;
+  }
 }

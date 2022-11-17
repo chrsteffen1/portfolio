@@ -1,19 +1,21 @@
 body{
-  background-color: darkgray;
+  background-color: #2F4858;
 }
-
+*{
+  color: #9BAEBC
+}
 nav{
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 40px;
-  background-color: grey;
+  background-color:#9BAEBC;
 }
 
 a{
   text-decoration: none;
-  color: antiquewhite;
+  color: #2F4858;
 }
 
 
