@@ -1,4 +1,4 @@
-import Pic from '../../assets/profilePic.png'
+// import Pic from '../../assets/profilePic.png'
 import styles from './Home.module.css'
 import About from '../About/About';
 import Projects from '../Projects/Projects';
