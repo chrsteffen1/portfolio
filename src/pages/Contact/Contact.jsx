@@ -27,15 +27,7 @@ const Contact = () => {
 
   return ( 
     <>
-      <h1 className={styles.contact}>Contact</h1>
-      {/* <div>
-        <p>Reach out if you'd liked to connect <a href="mailto:ChrisJSteffen@gmail.com ">email</a> <br />
-        Other links <br />
-        <a href="https://www.linkedin.com/in/chris-steffen1/" alt="" target='_blank' rel="noreferrer">linkedin</a>
-        <br />
-        <a href="https://github.com/chrsteffen1" alt='' target='_blank' rel="noreferrer">Github</a>
-        </p>
-      </div> */}
+      <h1 id="contact" className={styles.contact}>Contact</h1>
       <div className={styles.formDiv}>
         <form ref={form} onSubmit={sendEmail}>
           <div className={styles.input}>
@@ -51,7 +43,7 @@ const Contact = () => {
             <textarea name="message" cols='40' rows='5' required/>
           </div>
           <div className={styles.input}>
-            <button type="submit" value="Send">Submit</button>
+            <button type="submit" value="Send" className={styles.formSub}>Submit</button>
           </div>
         </form>
         <div className={styles.social}>

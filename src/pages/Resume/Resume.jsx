@@ -3,12 +3,12 @@ import styles  from './Resume.module.css'
 
 const Resume = () => {
   return ( 
-    <>
-      <h1>Resume</h1>
+    <section>
+      <h1 id="resume">Resume</h1>
       <p> Click here to download my resume
-        <a href={resume} download> <button class={styles.buttonDownload}>Download</button></a>
+        <a href={resume} download='Chris_Steffen_Resume'> <button className={styles.buttonDownload}>Download</button></a>
       </p>
-    </>
+    </section>
   );
 }
 

@@ -1,6 +1,18 @@
 .image{
   max-width: 300px;
-  border-radius: 15%;
+  border-radius: 35%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.name{
+  font-size: 150px;
+  color: rgb(24, 88, 130);
+  position: relative;
+  margin: 0%;
+}
+h2{
+  position: relative;
 }
 
 .landing{
@@ -8,4 +20,27 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100vh;  
+  position: relative;
+  width: 100%;
+}
+
+.landing::before{
+  content:'';
+  background-image: url('../../assets/Image.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+}
+
+
+
+.background{
+  position: absolute;
+  width: auto;
+  height: 100%;
 }

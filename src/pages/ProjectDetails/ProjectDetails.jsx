@@ -7,13 +7,20 @@ const ProjectDetails = () => {
   let project = findProject(projectDetails)
 
   return (  
-    <div className={styles.details}>
-    <h1 className={styles.title}>{project.title}</h1>
-    <img src={project.image} alt={project.title} className={styles.image} />
-    <br />
-    <p className={styles.description}>{project.description}</p>
-    <a href={project.repositoryLink} className={styles.git}><button>GitHub</button></a>
-    <a href={project.deploymentLink} className={styles.link}><button>Link</button></a> 
+    <div >
+      <div className={styles.details}>
+        <h1 className={styles.title}>{project.title}</h1>
+      </div>
+      <div className={styles.details}>
+        <img src={project.image} alt={project.title} className={styles.image} />
+      </div>
+      <div className={styles.details}>
+        <p className={styles.description}>{project.description}</p>
+      </div>
+      <div className={styles.details}>        
+        <a href={project.repositoryLink} className={styles.git}><button>GitHub</button></a>
+        <a href={project.deploymentLink} className={styles.link}><button>Link</button></a> 
+      </div>
     </div>
   );
 }

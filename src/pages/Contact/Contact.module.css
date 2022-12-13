@@ -35,7 +35,7 @@ textarea{
   margin: 50px;
 }
 
-button{
+.formSub{
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,10 @@
-/* .details{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+.details{
+  display: grid;
+  place-items: center;
+  background-color:#9BAEBC;
+}
+.card{
+  padding: 0%;
+  margin: 0%;
+  text-align: center;
+}

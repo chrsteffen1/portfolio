@@ -3,7 +3,7 @@ import Pic from '../../assets/profilePic.jpeg'
 
 const About = () => {
   return ( 
-    <div className={styles.about}>
+    <div className={styles.about} id='about'>
       <img className={styles.image} src={Pic} alt="" />
       <div className={styles.info}>
       <h1>About Chris</h1>

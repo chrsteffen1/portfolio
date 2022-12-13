@@ -3,8 +3,8 @@
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 25px ;
   padding: 50px;
+  background-color: lightgray;
 }
 
 .info{
@@ -22,7 +22,8 @@
   align-items: center;
   justify-content: center;
   height: 80%;
-  min-width: 300px;
+  max-height: 60vh;
+  max-width: 40%;
 }
 
 @media (max-width: 760px) {
