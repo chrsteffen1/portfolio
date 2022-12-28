@@ -2,6 +2,7 @@ import { projects } from "../../data/projects";
 import styles from './Projects.module.css'
 import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 
 const Projects = (props) => {
@@ -48,8 +49,9 @@ const Projects = (props) => {
       <h3>{projects[index].title}</h3>
     </div>
     <div className={styles.caption}>
-      <button><a href={projects[index].repositoryLink}>Github</a></button>
-      <button><a href={projects[index].deploymentLink}>Link</a></button>
+      <Button variant="secondary"><a href={projects[index].repositoryLink}>Github</a></Button>
+      <Button variant="secondary"><a href={projects[index].deploymentLink}>Link</a></Button>
+      
     </div>
     </section>
   );

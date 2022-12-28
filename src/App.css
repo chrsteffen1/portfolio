@@ -1,8 +1,4 @@
 
-*{
-  color: #9BAEBC;
-
-}
 a{
   text-decoration: none;
   color: #2F4858;
@@ -14,8 +10,12 @@ nav{
   justify-content: space-evenly;
   padding: 10px;
   background-color:#9BAEBC;
+  
 }
-
+nav a{
+  text-decoration: none;
+  color: black;
+}
 
 
 

@@ -29,8 +29,7 @@ li{
 
 .carousel{
   max-height: 100vh;
-  background-color: #2F4858;
-
+  /* background-color: #2F4858; */
 }
 
 
@@ -46,6 +45,11 @@ h3{
 
 .caption a {
   text-decoration: none;
+  color: white;
+}
+
+.caption button {
+  margin: 5px;
 }
 
 
