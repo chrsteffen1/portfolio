@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com'
 import styles from './Contact.module.css'
 import  gitIcon  from '../../assets/git_icon.png'
 import  linkedinIcon  from '../../assets/linkedin.png'
+import Button from 'react-bootstrap/Button';
 
 const Contact = () => {
   const form = useRef();
@@ -43,7 +44,7 @@ const Contact = () => {
             <textarea name="message" cols='40' rows='5' required/>
           </div>
           <div className={styles.input}>
-            <button type="submit" value="Send" className={styles.formSub}>Submit</button>
+            <Button variant='outline-dark' type="submit" value="Send" className={styles.formSub}>Submit</Button>
           </div>
         </form>
         <div className={styles.social}>

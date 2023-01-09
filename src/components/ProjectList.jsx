@@ -7,9 +7,7 @@ const ProjectList = (props) => {
       <h1>Projects</h1>
       {props.projects.map((project, idx) => (
         <div key={idx} className={styles.card}>
-
               <ProjectPreview title={project.title} image={project.image} git={project.repositoryLink}/>
-
         </div>
       ))}
     </div>
