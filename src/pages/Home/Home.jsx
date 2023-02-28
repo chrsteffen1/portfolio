@@ -21,7 +21,7 @@ const Home = () => {
       <About />
       <Projects />
       <Contact />
-      <Resume />
+      {/* <Resume /> */}
     </div>
   );
 }

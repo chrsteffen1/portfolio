@@ -52,6 +52,11 @@ h3{
   margin: 5px;
 }
 
+.title{
+  background-color: #9baebc;
+  margin: 0;
+
+}
 
 /* 
 @media only screen and (max-width: 900px){
