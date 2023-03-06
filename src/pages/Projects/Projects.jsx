@@ -26,12 +26,13 @@ const Projects = (props) => {
               src={project.image}
               alt={project.title}
             />
+            <Carousel.Caption className={styles.carouselCaption}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+      </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
-      <div className={styles.caption}>
-        <h3>{projects[index].title}</h3>
-      </div>
       <div className={styles.caption}>
         <Button variant="dark" className={styles.button} href={projects[index].repositoryLink}>
         <FontAwesomeIcon icon={faGithub} className={styles.icon} />
