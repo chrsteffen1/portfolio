@@ -64,4 +64,10 @@
   margin-right: 10px;
 }
 
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
 
