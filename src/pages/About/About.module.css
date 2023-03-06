@@ -3,9 +3,13 @@
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: row;
-  padding: 50px;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 16%, rgba(155,174,188,1) 53%, rgba(155,174,188,1) 100%);
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .info{
@@ -26,6 +30,7 @@
   max-height: 60vh;
   max-width: 40%;
 }
+
 
 @media (max-width: 760px) {
   .about{
