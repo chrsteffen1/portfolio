@@ -4,6 +4,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 const Projects = (props) => {
   const [index, setIndex] = useState(0);    
@@ -30,8 +33,14 @@ const Projects = (props) => {
         <h3>{projects[index].title}</h3>
       </div>
       <div className={styles.caption}>
-        <Button variant="secondary"><a href={projects[index].repositoryLink}>Github</a></Button>
-        <Button variant="secondary"><a href={projects[index].deploymentLink}>Link</a></Button>
+        <Button variant="dark" className={styles.button} href="https://github.com/chrsteffen1">
+        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+        Github
+        </Button>
+        <Button variant="dark" className={styles.button} href="https://www.linkedin.com/in/chris-steffen1/">
+        <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
+        Live Website
+        </Button>
       </div>
     </section>
   );

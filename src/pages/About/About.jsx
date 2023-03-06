@@ -8,6 +8,7 @@ const About = () => {
       <div className={styles.info}>
         <div class="about-me">
           <h2>About Me</h2>
+          <br />
           <p>Hi, I'm <strong>Chris Steffen</strong>, a software developer who recently transitioned from a career in construction to pursue my passion for coding. I attended General Assembly's coding boot camp, where I gained hands-on experience in building web and mobile applications using a variety of programming languages and technologies.</p>
           <p>Although my background is in construction, I've always been interested in technology and enjoyed tinkering with gadgets and software in my spare time. I decided to make a career change because I was excited about the endless possibilities that coding offers for solving problems and creating innovative solutions.</p>
           <p>As a self-motivated learner, I'm constantly seeking out new challenges and opportunities to grow my skills. I'm proficient in <strong>JavaScript, React.js, Python, TypeScript</strong>, and I'm eager to continue learning and expanding my knowledge.</p>

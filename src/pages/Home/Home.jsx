@@ -9,19 +9,17 @@ import Contact from '../Contact/Contact';
 const Home = () => {
   
   return ( 
-    <div className={styles.home}>
-      <div className={styles.landing} id='home'>
-        <div className={styles.circle}>    
+    <>
+      <section className={styles.landing} id='home'>
+          <div className={styles.circle}>
           <h1 className={styles.name}>Chris Steffen</h1>
-          <h2>Software Engineer</h2>
-
-        </div>
-      </div>   
-
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+          <h2 className={styles.subtitle}>Software Engineer</h2>
+          </div>
+        </section>
+        <About />
+        <Projects />
+        <Contact />
+    </>
   );
 }
 

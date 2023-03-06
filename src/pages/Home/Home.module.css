@@ -10,9 +10,11 @@
   color: rgb(24, 88, 130);
   position: relative;
   margin: 0%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 h2{
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .landing{
@@ -34,7 +36,7 @@ h2{
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 
