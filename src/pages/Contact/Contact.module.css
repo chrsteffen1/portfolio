@@ -1,56 +1,43 @@
-.formDiv{
+.contact {
+  border: 2px solid #9BAEBC;
+  background-color: #F5F5F5;
+  padding: 20px;
+  margin: 50px 0;
+}
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+}
+
+.contact .title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-.contact{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #9BAEBC;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-input{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  margin: 0%;
-  height: calc(2.25rem + 2px);
-  color: black;
-}
-
-textarea{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-}
-
-.input{
-  margin: 50px;
-}
-
-.formSub{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  margin: 0%;
-  height: calc(2.25rem + 2px);
-  color: black;
-}
-
-.icons {
-  height: 30px;
-  margin: 5px;
-}
-
-.social{
-  background-color: black;
+.button:hover {
+  background-color: #9BAEBC;
 }
