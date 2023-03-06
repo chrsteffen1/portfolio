@@ -12,7 +12,7 @@ import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 const Contact = () => {
   return ( 
     <>  
-<section className={styles.contact}>
+<section className={styles.contact} id='contact'>
   <h1 className={styles.title}>Contact</h1>
   <div className={styles.buttonContainer}>
     <Button variant="dark" className={styles.button} href={resume} download='Chris_Steffen_Resume'>

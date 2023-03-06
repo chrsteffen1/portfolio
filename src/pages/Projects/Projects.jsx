@@ -16,7 +16,7 @@ const Projects = (props) => {
   };
 
   return ( 
-    <section className={styles.projects}>
+    <section className={styles.projects} id='projects'>
       <h1 className={styles.title}>Projects</h1>
       <Carousel className={styles.container} activeIndex={index} onSelect={handleSelect}>
         {projects.map((project, i) => (
@@ -33,11 +33,11 @@ const Projects = (props) => {
         <h3>{projects[index].title}</h3>
       </div>
       <div className={styles.caption}>
-        <Button variant="dark" className={styles.button} href="https://github.com/chrsteffen1">
+        <Button variant="dark" className={styles.button} href={projects[index].repositoryLink}>
         <FontAwesomeIcon icon={faGithub} className={styles.icon} />
         Github
         </Button>
-        <Button variant="dark" className={styles.button} href="https://www.linkedin.com/in/chris-steffen1/">
+        <Button variant="dark" className={styles.button} href={projects[index].deploymentLink}>
         <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
         Live Website
         </Button>

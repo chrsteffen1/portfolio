@@ -23,7 +23,7 @@
   flex-wrap: wrap;
 }
 
-.button {
+.buttonContainer .button {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
@@ -38,6 +38,6 @@
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #9BAEBC;
+.buttonContainer .button:hover {
+  background-color: #0f4c75;
 }
