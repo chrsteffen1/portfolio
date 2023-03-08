@@ -26,10 +26,10 @@ const Projects = (props) => {
               src={project.image}
               alt={project.title}
             />
-            <Carousel.Caption className={styles["carousel-caption"]}>
+            <Carousel.Caption className={styles.myCarouselCaption}>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-        </Carousel.Caption>
+      </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
