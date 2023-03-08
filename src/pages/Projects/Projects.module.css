@@ -19,6 +19,7 @@
 .image {
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .caption {
@@ -75,9 +76,24 @@
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
-  color: white; /* white text */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   text-align: center;
 }
+
+.carousel-caption h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+
+
+
 
 

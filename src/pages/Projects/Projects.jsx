@@ -29,7 +29,7 @@ const Projects = (props) => {
             <Carousel.Caption className={styles.carouselCaption}>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-      </Carousel.Caption>
+            </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
