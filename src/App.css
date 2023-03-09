@@ -1,4 +1,6 @@
-
+:root {
+  --theme: #9BAEBC
+}
 a{
   text-decoration: none;
   color: #2F4858;
@@ -8,7 +10,7 @@ a{
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #9BAEBC;
+  background-color: var(--theme);
 }
 
 .navbar a {

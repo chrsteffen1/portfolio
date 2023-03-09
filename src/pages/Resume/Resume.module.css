@@ -2,7 +2,7 @@
   display: inline-block;
   position: relative;
   padding: 10px 25px;
-  background-color: #9BAEBC;
+  background-color: var(--theme);
   color: white;
   font-family: sans-serif;
   text-decoration: none;
@@ -14,7 +14,7 @@
 }
 
 .buttonDownload:hover {
-  background-color: #9BAEBC;
+  background-color: var(--theme)EBC;
   color: white;
 }
 

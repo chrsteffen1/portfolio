@@ -43,7 +43,7 @@ h2{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #9BAEBC;
+  background-color: var(--theme);
   border: none;
   border-radius: 50%;
   color: #fff;

@@ -44,7 +44,7 @@
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #9BAEBC;
+  background-color: var(--theme);
   border: none;
   border-radius: 20px;
   color: #fff;

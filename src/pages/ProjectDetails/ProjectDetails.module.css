@@ -1,7 +1,7 @@
 .details{
   display: grid;
   place-items: center;
-  background-color:#9BAEBC;
+  background-color:var(--theme);
 }
 .card{
   padding: 0%;
