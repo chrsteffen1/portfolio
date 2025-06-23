@@ -55,14 +55,10 @@ const Contact = () => {
                 Get In Touch
               </a>
               
-              <a 
-                href={resume} 
-                download='Chris_Steffen_Resume'
-                className={`${styles.contactBtn} ${styles.btnSecondary}`}
-              >
-                <FontAwesomeIcon icon={faFilePdf} />
-                Download Resume
-              </a>
+              <a href="https://docs.google.com/document/d/135vuVJoC3ErVarGzMLxBiob3KqC-vZvvZpu8e7oYK0A/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+  <button className={styles.buttonDownload}>View Resume</button>
+</a>
+
             </div>
             
             <div className={styles.socialActions}>
