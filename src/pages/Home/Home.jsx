@@ -3,8 +3,8 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer';
-import { FaArrowUp, FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
-import { HiOutlineCode, HiOutlineLightBulb, HiOutlineRocket } from 'react-icons/hi';
+import { FaArrowUp, FaGithub, FaLinkedin, FaDownload, FaRocket } from 'react-icons/fa';
+import { HiOutlineCode, HiOutlineLightBulb } from 'react-icons/hi';
 import resume from '../../assets/Chris_Steffen_Resume.pdf';
 
 const Home = () => {
@@ -44,7 +44,7 @@ const Home = () => {
                 className="btn btn-primary"
                 onClick={() => scrollToSection('projects')}
               >
-                <HiOutlineRocket />
+                <FaRocket />
                 View My Work
               </button>
               <a 
@@ -127,7 +127,7 @@ const Home = () => {
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIcon}>
-              <HiOutlineRocket />
+              <FaRocket />
             </div>
             <h3>Fast Learner</h3>
             <p>Constantly evolving with new technologies and frameworks</p>
