@@ -3,9 +3,9 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer';
-import { FaArrowUp, FaGithub, FaLinkedin, FaDownload, FaRocket } from 'react-icons/fa';
+import { FaArrowUp, FaGithub, FaLinkedin, FaRocket } from 'react-icons/fa';
 import { HiOutlineCode, HiOutlineLightBulb } from 'react-icons/hi';
-import resume from '../../assets/Chris_Steffen_Resume.pdf';
+
 
 const Home = () => {
   

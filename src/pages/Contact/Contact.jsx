@@ -1,9 +1,8 @@
 import React from "react";
 import styles from './Contact.module.css'
-import resume from '../../assets/Chris_Steffen_Resume.pdf'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faFilePdf, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return ( 
