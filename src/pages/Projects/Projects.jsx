@@ -1,51 +1,127 @@
 import { projects } from "../../data/projects";
 import styles from './Projects.module.css'
-import Carousel from 'react-bootstrap/Carousel'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-const Projects = (props) => {
-  const [index, setIndex] = useState(0);    
+const Projects = () => {
+  const [currentProject, setCurrentProject] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
+  const nextProject = () => {
+    setCurrentProject((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevProject = () => {
+    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const goToProject = (index) => {
+    setCurrentProject(index);
   };
 
   return ( 
-    <section className={styles.projects} id='projects'>
-      <h1 className={styles.title}>Projects</h1>
-      <Carousel className={styles.container} activeIndex={index} onSelect={handleSelect}>
-        {projects.map((project, i) => (
-          <Carousel.Item key={i}>
-            <img
-              className={styles.image}
-              src={project.image}
-              alt={project.title}
-            />
-            <Carousel.Caption className={styles.myCarouselCaption}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-      </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-      <div className={styles.caption}>
-        <Button variant="dark" className={styles.button} href={projects[index].repositoryLink}>
-        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-        Github
-        </Button>
-        <Button variant="dark" className={styles.button} href={projects[index].deploymentLink}>
-        <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
-        Live Website
-        </Button>
+    <section className={`${styles.projects} section`} id='projects'>
+      <div className="container">
+        <h2 className="section-title">Featured Projects</h2>
+        
+        <div className={styles.projectShowcase}>
+          <div className={styles.projectMain}>
+            <div className={styles.projectImage}>
+              <img
+                src={projects[currentProject].image}
+                alt={projects[currentProject].title}
+              />
+              <div className={styles.projectOverlay}>
+                <div className={styles.projectActions}>
+                  <a 
+                    href={projects[currentProject].repositoryLink}
+                    className={`${styles.projectBtn} ${styles.btnSecondary}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                    Code
+                  </a>
+                  <a 
+                    href={projects[currentProject].deploymentLink}
+                    className={`${styles.projectBtn} ${styles.btnPrimary}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.projectInfo}>
+              <h3 className={styles.projectTitle}>
+                {projects[currentProject].title}
+              </h3>
+              <p className={styles.projectDescription}>
+                {projects[currentProject].description}
+              </p>
+              
+              <div className={styles.projectNavigation}>
+                <button 
+                  className={styles.navBtn}
+                  onClick={prevProject}
+                  aria-label="Previous project"
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                
+                <div className={styles.projectIndicators}>
+                  {projects.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`${styles.indicator} ${
+                        index === currentProject ? styles.active : ''
+                      }`}
+                      onClick={() => goToProject(index)}
+                      aria-label={`Go to project ${index + 1}`}
+                    />
+                  ))}
+                </div>
+                
+                <button 
+                  className={styles.navBtn}
+                  onClick={nextProject}
+                  aria-label="Next project"
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.projectGrid}>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`${styles.projectCard} ${
+                  index === currentProject ? styles.active : ''
+                }`}
+                onClick={() => goToProject(index)}
+              >
+                <div className={styles.cardImage}>
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className={styles.cardContent}>
+                  <h4 className={styles.cardTitle}>{project.title}</h4>
+                  <p className={styles.cardDescription}>
+                    {project.description.substring(0, 80)}...
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
 export default Projects;
-
