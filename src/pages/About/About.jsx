@@ -1,6 +1,6 @@
 import styles from './About.module.css'
 import Pic from '../../assets/profilePic.jpeg'
-import { HiOutlineCode, HiOutlineCog, HiOutlineDesktopComputer, HiOutlineDatabase } from 'react-icons/hi';
+import { HiOutlineCode, HiOutlineDesktopComputer, HiOutlineDatabase } from 'react-icons/hi';
 import { SiJavascript, SiReact, SiPython, SiTypescript, SiNodedotjs, SiMongodb } from 'react-icons/si';
 
 const About = () => {
