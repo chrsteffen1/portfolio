@@ -2,7 +2,7 @@ import React from "react";
 import styles from './Contact.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faFile } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return ( 
@@ -54,9 +54,14 @@ const Contact = () => {
                 Get In Touch
               </a>
               
-              <a href="https://docs.google.com/document/d/135vuVJoC3ErVarGzMLxBiob3KqC-vZvvZpu8e7oYK0A/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-  <button className={styles.buttonDownload}>View Resume</button>
-</a>
+              <a 
+                href="https://docs.google.com/document/d/135vuVJoC3ErVarGzMLxBiob3KqC-vZvvZpu8e7oYK0A/edit?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`${styles.contactBtn} ${styles.btnSecondary}`}
+              >
+                <FontAwesomeIcon icon={faFile} />View Resume
+              </a>
 
             </div>
             

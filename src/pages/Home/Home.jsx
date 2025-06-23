@@ -47,9 +47,15 @@ const Home = () => {
                 <FaRocket />
                 View My Work
               </button>
-              <a href="https://docs.google.com/document/d/135vuVJoC3ErVarGzMLxBiob3KqC-vZvvZpu8e7oYK0A/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-  <button className={styles.buttonDownload}>View Resume</button>
-</a>
+              
+              <a 
+                href="https://docs.google.com/document/d/135vuVJoC3ErVarGzMLxBiob3KqC-vZvvZpu8e7oYK0A/edit?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                View Resume
+              </a>
 
             </div>
             <div className={styles.socialLinks}>
