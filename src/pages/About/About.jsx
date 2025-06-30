@@ -1,24 +1,18 @@
 import styles from './About.module.css'
 import Pic from '../../assets/profilePic.jpeg'
 import { HiOutlineCode, HiOutlineDesktopComputer, HiOutlineDatabase } from 'react-icons/hi';
-import { SiJavascript, SiReact, SiPython, SiTypescript, SiNodedotjs, SiMongodb } from 'react-icons/si';
+import SkillsShowcase from '../../components/SkillsShowcase';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const About = () => {
-  const skills = [
-    { name: 'JavaScript', icon: SiJavascript, color: '#f7df1e' },
-    { name: 'React', icon: SiReact, color: '#61dafb' },
-    { name: 'Python', icon: SiPython, color: '#3776ab' },
-    { name: 'TypeScript', icon: SiTypescript, color: '#3178c6' },
-    { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-    { name: 'MongoDB', icon: SiMongodb, color: '#47a248' },
-  ];
+  const { elementRef, hasIntersected } = useIntersectionObserver();
 
   return ( 
-    <section className={`${styles.about} section`} id='about'>
+    <section className={`${styles.about} section`} id='about' ref={elementRef}>
       <div className="container">
         <h2 className="section-title">About Me</h2>
         
-        <div className={styles.aboutContent}>
+        <div className={`${styles.aboutContent} ${hasIntersected ? styles.visible : ''}`}>
           <div className={styles.aboutImage}>
             <div className={styles.imageWrapper}>
               <img src={Pic} alt="Chris Steffen" />
@@ -53,21 +47,9 @@ const About = () => {
           </div>
         </div>
 
-        <div className={styles.skillsSection}>
-          <h3 className={styles.skillsTitle}>Technical Skills</h3>
-          <div className={styles.skillsGrid}>
-            {skills.map((skill, index) => (
-              <div key={index} className={styles.skillCard}>
-                <div className={styles.skillIcon} style={{ color: skill.color }}>
-                  <skill.icon />
-                </div>
-                <span className={styles.skillName}>{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <SkillsShowcase />
 
-        <div className={styles.highlights}>
+        <div className={`${styles.highlights} ${hasIntersected ? styles.visible : ''}`}>
           <div className={styles.highlight}>
             <div className={styles.highlightIcon}>
               <HiOutlineCode />

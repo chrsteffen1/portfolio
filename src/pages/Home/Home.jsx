@@ -3,12 +3,23 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer';
+import ScrollProgress from '../../components/ScrollProgress';
 import { FaArrowUp, FaGithub, FaLinkedin, FaRocket } from 'react-icons/fa';
 import { HiOutlineCode, HiOutlineLightBulb } from 'react-icons/hi';
-
+import { useState, useEffect } from 'react';
 
 const Home = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
   
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -26,6 +37,8 @@ const Home = () => {
 
   return ( 
     <>
+      <ScrollProgress />
+      
       <section className={styles.hero} id='home'>
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
@@ -56,13 +69,22 @@ const Home = () => {
               >
                 View Resume
               </a>
-
             </div>
             <div className={styles.socialLinks}>
-              <a href="https://github.com/chrsteffen1" className={styles.socialLink}>
+              <a 
+                href="https://github.com/chrsteffen1" 
+                className={styles.socialLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/chris-steffen1/" className={styles.socialLink}>
+              <a 
+                href="https://www.linkedin.com/in/chris-steffen1/" 
+                className={styles.socialLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin />
               </a>
             </div>
@@ -137,7 +159,10 @@ const Home = () => {
         </div>
       </section>
 
-      <button className={styles.scrollToTop} onClick={handleClick}>
+      <button 
+        className={`${styles.scrollToTop} ${showScrollTop ? styles.visible : ''}`} 
+        onClick={handleClick}
+      >
         <FaArrowUp />
       </button>
 

@@ -1,5 +1,17 @@
 .about {
   background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="aboutPattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="var(--primary)" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23aboutPattern)"/></svg>');
 }
 
 .aboutContent {
@@ -8,6 +20,16 @@
   gap: 4rem;
   align-items: start;
   margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.aboutContent.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .aboutImage {
@@ -16,16 +38,39 @@
 
 .imageWrapper {
   position: relative;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.imageWrapper:hover::before {
+  opacity: 0.1;
 }
 
 .imageWrapper img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imageWrapper:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
 }
 
 .imageWrapper:hover img {
@@ -54,19 +99,40 @@
 }
 
 .intro h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.intro h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--gradient-accent);
+  border-radius: 1px;
 }
 
 .intro p,
 .journey p,
 .personal p {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 1rem;
+}
+
+.intro strong,
+.journey strong {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .personal h4 {
@@ -76,61 +142,20 @@
   margin-bottom: 0.75rem;
 }
 
-.skillsSection {
-  margin-bottom: 4rem;
-}
-
-.skillsTitle {
-  font-size: 1.75rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-}
-
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-}
-
-.skillCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-  background: var(--background);
-  border-radius: 1rem;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border: 1px solid var(--border);
-}
-
-.skillCard:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.skillIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.skillCard:hover .skillIcon {
-  transform: scale(1.1);
-}
-
-.skillName {
-  font-weight: 600;
-  color: var(--text-primary);
-  text-align: center;
-}
-
 .highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.highlights.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .highlight {
@@ -138,30 +163,53 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   background: var(--background);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .highlight:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.highlight:hover::before {
+  transform: scaleX(1);
 }
 
 .highlightIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--gradient-primary);
+  border-radius: 1.25rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight:hover .highlightIcon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .highlight h4 {
@@ -174,6 +222,7 @@
 .highlight p {
   color: var(--text-secondary);
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Responsive Design */
@@ -181,15 +230,12 @@
   .aboutContent {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-  
-  .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
+    text-align: center;
   }
   
   .highlights {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -199,7 +245,7 @@
   }
   
   .intro h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   
   .intro p,
@@ -208,25 +254,25 @@
     font-size: 1rem;
   }
   
-  .skillsGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .highlight {
+    padding: 2rem 1.5rem;
   }
   
-  .skillCard {
-    padding: 1rem;
-  }
-  
-  .skillIcon {
-    font-size: 2rem;
+  .highlightIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .skillsGrid {
-    grid-template-columns: 1fr;
-  }
-  
   .highlight {
     padding: 1.5rem;
+  }
+  
+  .highlightIcon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
   }
 }
