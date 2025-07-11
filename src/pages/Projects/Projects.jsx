@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { projects } from "../../data/projects";
 import { useNetlifyProjects, mergeWithNetlifyData } from "../../hooks/useNetlifyProjects";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import ProjectCard from "../../components/ProjectCard";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import styles from './Projects.module.css';
@@ -12,7 +13,7 @@ const Projects = () => {
   const [sortBy, setSortBy] = useState('featured');
   const [displayProjects, setDisplayProjects] = useState([]);
   const { netlifyProjects, loading: netlifyLoading } = useNetlifyProjects();
-
+  const { elementRef, hasIntersected } = useIntersectionObserver();
 
   useEffect(() => {
     let filteredProjects = [...projects];
@@ -62,11 +63,11 @@ const Projects = () => {
   };
 
   return ( 
-    <section className={`${styles.projects} section`} id='projects' >
+    <section className={`${styles.projects} section`} id='projects' ref={elementRef}>
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
         
-        {/* Project Stats */} {/* ${hasIntersected ? styles.visible : ''} */}
+        {/* Project Stats */}
         <div className={`${styles.statsGrid} ${hasIntersected ? styles.visible : ''}`}>
           <div className={styles.statCard}>
             <div className={styles.statIcon}>
